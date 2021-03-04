@@ -1,6 +1,7 @@
 #include <string>
 
-class Hero {
+class Hero 
+{
 	int id;
 	std::string name;
 	int hp;
