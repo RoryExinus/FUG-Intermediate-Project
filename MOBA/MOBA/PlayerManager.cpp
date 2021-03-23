@@ -1,5 +1,10 @@
 #include "PlayerManager.h"
 
+PlayerManager::PlayerManager()
+{
+
+}
+
 Player PlayerManager::CreatePlayer(int id, std::string name, int rank)
 {
 	return Player(id, name, rank);

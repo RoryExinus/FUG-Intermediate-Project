@@ -1,6 +1,11 @@
 #include "HeroManager.h"
 #include <iostream>
 
+HeroManager::HeroManager()
+{
+
+}
+
 Hero HeroManager::CreateHero(int id, std::string name, int hp, int dmg)
 {
 	return Hero(id, name, hp, dmg);

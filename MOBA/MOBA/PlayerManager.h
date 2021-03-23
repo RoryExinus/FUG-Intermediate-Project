@@ -4,7 +4,7 @@
 #include <vector>
 
 class PlayerManager {
-
+public:
 	PlayerManager();
 
 	Player CreatePlayer(int id, std::string name,int rank);
@@ -16,5 +16,4 @@ class PlayerManager {
 	void DeletePlayer(Player player);
 
 	void ShowPlayerInfo(Player player);
-
 };

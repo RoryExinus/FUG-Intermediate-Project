@@ -5,3 +5,16 @@ PaH::PaH(Player c_player, Hero c_hero)
 	this->player = c_player;
 	this->hero = c_hero;
 }
+
+int PaH::GetHeroDMG()
+{
+
+	return hero.GetDMG();
+}
+
+int PaH::GetHeroHP()
+{
+	return hero.GetDMG();
+}
+
+

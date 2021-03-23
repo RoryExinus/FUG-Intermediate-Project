@@ -13,6 +13,8 @@ public:
 
 	int GetId();
 	std::string GetName();
+	int GetDMG();
+	int GetHP();
 	
 	friend std::ostream& operator<< (std::ostream& out, const Hero	&hero);
 };

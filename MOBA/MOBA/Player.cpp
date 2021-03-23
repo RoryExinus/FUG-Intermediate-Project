@@ -8,7 +8,7 @@ Player::Player()
 	rank = 300 + rand() % 1000;
 }
 
-Player::~Player()
+Player::~Player() {};
 
 Player::Player(int c_ind, std::string c_name, int c_rank)
 {
@@ -34,8 +34,8 @@ int Player::GetRank()
 
 std::ostream& operator<<(std::ostream& out, const Player& player)
 {
-	out << "Name: " << player.name << std::endl
-		<< "Id: " << player.id << std::endl
+	out << "Player name: " << player.name << std::endl
+		<< "Player id: " << player.id << std::endl
 		<< "Rank: " << player.rank << std::endl;
 	return out;
 }
