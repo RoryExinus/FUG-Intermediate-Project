@@ -8,5 +8,11 @@ class Player {
 
 public:
 	Player();
+	~Player();
 	Player(int c_ind, std::string c_name, int c_rank);
+	std::string GetName();
+	int GetId();
+	int GetRank();
+	friend std::ostream& operator<< (std::ostream& out, const Player& player);
 };
+std::ostream& operator<< (std::ostream& out, const Player& player);

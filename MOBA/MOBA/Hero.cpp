@@ -1,4 +1,5 @@
 #include "Hero.h"
+#include <iostream>
 
 Hero::Hero()
 {
@@ -14,4 +15,23 @@ Hero::Hero(int c_id, std::string c_name, int c_hp, int c_dmg)
 	this->name = c_name;
 	this->hp = c_hp;
 	this->dmg = c_dmg;
+}
+
+int Hero::GerId()
+{
+	return id;
+}
+
+std::string Hero::GetName()
+{
+	return name;
+}
+
+std::ostream& operator<<(std::ostream& out, const Hero& hero)
+{
+	out << "Name: " << hero.name << std::endl
+		<< "Id: " << hero.id << std::endl
+		<< "HP: " << hero.hp << std::endl
+		<< "DMG: " << hero.dmg << std::endl;
+	return out;
 }
