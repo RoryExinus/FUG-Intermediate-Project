@@ -36,6 +36,6 @@ std::ostream& operator<<(std::ostream& out, const Player& player)
 {
 	out << "Player name: " << player.name << std::endl
 		<< "Player id: " << player.id << std::endl
-		<< "Rank: " << player.rank << std::endl;
+		<< "Player rank: " << player.rank << std::endl;
 	return out;
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#pragma once
 #include "PaH.h"
 
 class Team

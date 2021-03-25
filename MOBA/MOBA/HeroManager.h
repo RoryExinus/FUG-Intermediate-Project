@@ -1,3 +1,4 @@
+#pragma once
 #include "Hero.h" 
 #include <string>
 #include <vector>
