@@ -5,8 +5,6 @@
 
 class PlayerManager {
 public:
-	PlayerManager();
-
 	Player CreatePlayer(int id, std::string name,int rank);
 
 	Player GetPlayerByName(std::string name, std::vector<Player> list);

@@ -6,8 +6,6 @@
 
 class HeroManager {
 public:
-	HeroManager();
-
 	Hero CreateHero(int id, std::string name, int hp, int dmg);
 
 	Hero GetHeroByName(std::string name, std::vector<Hero> list);
