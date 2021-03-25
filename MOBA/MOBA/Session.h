@@ -9,8 +9,9 @@ class Session {
 	Team radiant;
 	Team winner;
 
-	Session(Team dire, Team radiant);
-	Team CalculateWinner(Team dire, Team radiant);
+public:
+	Session(Team c_dire, Team c_radiant);
+	Team CalculateWinner();
 	friend std::ostream& operator<< (std::ostream& out, const Session& hero);
 };
-std::ostream& operator<< (std::ostream& out, const Session& hero);
+std::ostream& operator<< (std::ostream& out, const Session& session);

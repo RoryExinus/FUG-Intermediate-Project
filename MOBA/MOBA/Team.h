@@ -17,6 +17,7 @@ public:
 	
 	int calculateTotalDMG();
 	int calculateTotalHP();
+	std::vector <PaH> GetTeam();
 	friend std::ostream& operator<< (std::ostream& out, const Team& team);
 };
 std::ostream& operator<< (std::ostream& out, const Team& team);

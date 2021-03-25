@@ -32,6 +32,11 @@ int Player::GetRank()
 	return rank;
 }
 
+void Player::editRank(int value)
+{
+	rank += value;
+}
+
 std::ostream& operator<<(std::ostream& out, const Player& player)
 {
 	out << "Player name: " << player.name << std::endl

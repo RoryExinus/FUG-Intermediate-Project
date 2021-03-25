@@ -14,6 +14,7 @@ public:
 	std::string GetName();
 	int GetId();
 	int GetRank();
+	void editRank(int value);
 	friend std::ostream& operator<< (std::ostream& out, const Player& player);
 };
 std::ostream& operator<< (std::ostream& out, const Player& player);

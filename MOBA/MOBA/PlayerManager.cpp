@@ -1,9 +1,5 @@
 #include "PlayerManager.h"
 
-PlayerManager::PlayerManager()
-{
-
-}
 
 Player PlayerManager::CreatePlayer(int id, std::string name, int rank)
 {
@@ -12,9 +8,9 @@ Player PlayerManager::CreatePlayer(int id, std::string name, int rank)
 
 Player PlayerManager::GetPlayerByName(std::string name, std::vector<Player> list)
 {
-	for (int i = 0; i < list.size; i++)
+	for (int i = 0; i < list.size(); i++)
 	{
-		if (list[i].GetName == name)
+		if (list[i].GetName() == name)
 		{
 			return list[i];
 		}
@@ -29,9 +25,9 @@ Player PlayerManager::GetPlayerByName(std::string name, std::vector<Player> list
 
 Player GetPlayerById(int id, std::vector<Player> list)
 {
-	for (int i = 0; i < list.size; i++)
+	for (int i = 0; i < list.size(); i++)
 	{
-		if (list[i].GetId == id)
+		if (list[i].GetId() == id)
 		{
 			return list[i];
 		}

@@ -1,5 +1,21 @@
 #include "GameManager.h"
 
+void GameManager::PerformGameSession(std::vector<PaH> firstT, std::vector<PaH> secondT, std::vector<Player> players, std::vector<Hero> heroes)
+{
+	TeamManager tm;
+	std::vector<Player>* ptr_players = new std::vector<Player>;
+	ptr_players = &players;
+	std::vector<Hero>* ptr_heroes = new std::vector<Hero>;
+	ptr_heroes = &heroes;
+	firstT = randTeam(ptr_players, ptr_heroes);
+	secondT = randTeam(ptr_players, ptr_heroes);
+	Team dire = tm.GenerateNewTeam("Dire", firstT);
+	Team radiant = tm.GenerateNewTeam("Radiant", firstT);
+	Session session(dire, radiant);
+	Team winner = session.CalculateWinner();
+	gameSessions.push_back(session);
+}
+
 std::vector<PaH> GameManager::randTeam(std::vector<Player> *players, std::vector<Hero> *heroes)
 {
 	std::vector<PaH> team;
@@ -16,3 +32,13 @@ std::vector<PaH> GameManager::randTeam(std::vector<Player> *players, std::vector
 	}
 	return team;
 }
+
+void GameManager::PrintGameSessions()
+{
+	for (int i = 0; i < gameSessions.size(); i++)
+	{
+		std::cout << gameSessions[i] << std::endl;
+	}
+}
+
+

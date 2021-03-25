@@ -1,10 +1,7 @@
 #include "HeroManager.h"
 #include <iostream>
 
-HeroManager::HeroManager()
-{
 
-}
 
 Hero HeroManager::CreateHero(int id, std::string name, int hp, int dmg)
 {
@@ -13,9 +10,9 @@ Hero HeroManager::CreateHero(int id, std::string name, int hp, int dmg)
 
 Hero HeroManager::GetHeroByName(std::string name, std::vector<Hero> list)
 {
-	for (int i = 0; i < list.size; i++)
+	for (int i = 0; i < list.size(); i++)
 	{
-		if (list[i].GetName == name)
+		if (list[i].GetName() == name)
 		{
 			return list[i];
 		}
@@ -28,9 +25,9 @@ Hero HeroManager::GetHeroByName(std::string name, std::vector<Hero> list)
 
 Hero HeroManager::GetHeroById(int id, std::vector<Hero> list)
 {
-	for (int i = 0; i < list.size; i++)
+	for (int i = 0; i < list.size(); i++)
 	{
-		if (list[i].GetId == id)
+		if (list[i].GetId() == id)
 		{
 			return list[i];
 		}

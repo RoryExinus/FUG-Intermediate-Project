@@ -17,6 +17,11 @@ int PaH::GetHeroHP()
 	return hero.GetDMG();
 }
 
+Player PaH::GetPlayer()
+{
+	return player;
+}
+
 std::ostream& operator<<(std::ostream& out, const PaH& pah)
 {
 	out << "Player: " << pah.player << " & Hero: " << pah.hero;
