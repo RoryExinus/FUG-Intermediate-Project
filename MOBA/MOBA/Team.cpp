@@ -6,8 +6,6 @@ Team::Team(std::string c_name, std::vector<PaH> c_team)
 {
 	this->name = c_name;
 	this->team = c_team;
-
-
 	calculateTotalDMG();
 	calculateTotalHP();
 }
@@ -39,4 +37,11 @@ std::ostream& operator<<(std::ostream& out, const Team& team)
 	out << "Team Name: " << team.name << std::endl
 		<< "Team total dmg: " << team.totalDMG << std::endl
 		<< "Team total hp: " << team.totalHP << std::endl;
+	for (int i = 0; i < team.team.size(); i++)
+	{
+		out << team.team[i];
+	}
+	return out;
 }
+
+

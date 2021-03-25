@@ -25,6 +25,8 @@ Player PlayerManager::GetPlayerByName(std::string name, std::vector<Player> list
 	}
 }
 
+
+
 Player GetPlayerById(int id, std::vector<Player> list)
 {
 	for (int i = 0; i < list.size; i++)

@@ -12,6 +12,7 @@ class Team
 	int totalHP;
 
 public:
+	Team();
 	Team(std::string c_name, std::vector <PaH> c_team);
 	
 	int calculateTotalDMG();
