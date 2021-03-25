@@ -41,6 +41,8 @@ std::vector<PaH> Team::GetTeam()
 	return team;
 }
 
+
+
 std::ostream& operator<<(std::ostream& out, const Team& team)
 {
 	out << "Team Name: " << team.name << std::endl
@@ -52,5 +54,7 @@ std::ostream& operator<<(std::ostream& out, const Team& team)
 	}
 	return out;
 }
+
+
 
 

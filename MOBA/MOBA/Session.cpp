@@ -1,6 +1,5 @@
 #include "Session.h"
 #include "PaH.h"
-
 Session::Session(Team c_dire, Team c_radiant) {
 	auto end = std::chrono::system_clock::now();
 	startTime = std::chrono::system_clock::to_time_t(end);
@@ -8,12 +7,13 @@ Session::Session(Team c_dire, Team c_radiant) {
 	radiant = c_radiant;
 }
 
-Team Session::CalculateWinner()
+void Session::CalculateWinner()
 {
 	int direHP = dire.calculateTotalHP() - radiant.calculateTotalDMG();
 	int radiantHP = radiant.calculateTotalHP() - dire.calculateTotalDMG();
 	if (direHP > radiantHP)
 	{
+
 		winner = dire;
 		for (int i = 0; i < 5; i++)
 		{
@@ -30,7 +30,6 @@ Team Session::CalculateWinner()
 			dire.GetTeam()[i].GetPlayer().editRank(-25);
 		}
 	}
-	return winner;
 }
 
 std::ostream& operator<<(std::ostream& out, const Session& session)

@@ -10,10 +10,11 @@ void GameManager::PerformGameSession(std::vector<PaH> firstT, std::vector<PaH> s
 	firstT = randTeam(ptr_players, ptr_heroes);
 	secondT = randTeam(ptr_players, ptr_heroes);
 	Team dire = tm.GenerateNewTeam("Dire", firstT);
-	Team radiant = tm.GenerateNewTeam("Radiant", firstT);
+	Team radiant = tm.GenerateNewTeam("Radiant", secondT);
 	Session session(dire, radiant);
-	Team winner = session.CalculateWinner();
-	gameSessions.push_back(session);
+	session.CalculateWinner();
+	gameSessions.emplace_back(session);
+	std::cout << session;
 }
 
 std::vector<PaH> GameManager::randTeam(std::vector<Player> *players, std::vector<Hero> *heroes)
@@ -24,7 +25,7 @@ std::vector<PaH> GameManager::randTeam(std::vector<Player> *players, std::vector
 		int randIndP = rand() % players[0].size();
 		int randIndH = rand() % players[0].size();
 		PaH cell((*players)[randIndP], (*heroes)[randIndH]);
-		team.push_back(cell);
+		team.emplace_back(cell);
 		auto iterP = (*players).cbegin();
 		(*players).erase(iterP + randIndP);
 		auto iterH = (*heroes).cbegin();
